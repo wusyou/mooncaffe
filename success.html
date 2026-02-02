@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="photo/logo.png">
+  <link rel="stylesheet" href="success.css">
+  <title>Payment Successful</title>
+</head>
+<body>
+  <header>
+    <div class="left">
+      <a href="info.html" class="back">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+      </a>
+      <div class="logo">
+        <a><img src="photo/logo.png" width="70"></a>
+        <span class="mooncaffe-text">MOON CAFFÈ</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="payment-successful-container">
+      <h1 class="payment-successful">✅ Payment Successful!</h1>
+      <p>Thank you for your order at Moon Caffè ☕</p>
+      <p>Don't forget to copy your "Order ID" for tracking!</p>
+
+      <div id="customer-details">
+        <h3>Customer Information</h3>
+        <p id="cust-name"></p>
+        <p id="cust-contact"></p>
+        <p id="cust-address"></p>
+        <p id="cust-notes"></p>
+      </div>
+
+      <div id="order-items">
+        <!-- JS will populate cart items here -->
+      </div>
+
+      <hr>
+
+      <div class="totals">
+        <p>Subtotal: ₱<span id="subtotal">0</span></p>
+        <p>Delivery Fee: ₱<span id="delivery-fee">0</span></p>
+        <p>Total: ₱<span id="total">0</span></p>
+          <p>⏱ Estimated Delivery Time: <span id="eta">Calculating...</span></p>
+      </div>
+
+      <hr>
+
+      <a href="home.html" class="back-to-home">Back to Home</a>
+    </section>
+  </main>
+
+  <footer>
+      <div class="vama-corp">
+        <p>Developed by:</p>
+        <img src="photo/vama.png" height="50">
+      </div>
+      <p class="copyright">&copy; 2025 Moon Caffè. All rights reserved.</p>
+  </footer>
+
+  <script src="success.js?v=2"></script>
+</body>
+</html>

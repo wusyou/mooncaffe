@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="photo/logo.png">
+    <link href="global.css" rel="stylesheet">
+    <link href="track-order.css" rel="stylesheet">
+    <title>Track Order | Moon Caffe</title>
+</head>
+<body class="grid-wrap">
+    <nav>
+        <div class="left-nav">
+            <a href="index.html"><img src="photo/logo.png" width="70"></a>
+            <span class="mooncaffe-text">MOON CAFFÈ</span>
+        </div>
+        <div class="nav-btn">
+            <a href="index.html" class="active">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="track-order.html" class="trackOrder">Track Order</a>
+            <a href="#" class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </a>
+        </div>
+    </nav>
+    <div class="sidebar">
+        <a href="#" class="close-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" 
+                viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+            </svg>
+        </a>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="track-order.html" class="trackOrder">Track Order</a>
+    </div>
+
+    <div class="track-container">
+        <h2>🔎 Track Your Order</h2>
+        <p>Please enter your Order ID to check the status:</p>
+        <input type="text" class="order-input" placeholder="Enter Order ID (e.g. MC-123456)">
+        <button class="track-btn">Track Order</button>
+        <div class="order-result" style="display:none; margin-top: 20px;">
+            <div class="order-card">
+                <p><strong>Order ID:</strong> <span id="result-order-id"></span></p>
+                <p><strong>Customer Name:</strong> <span id="result-customer"></span></p>
+                <p><strong>Contact:</strong> <span id="result-contact"></span></p>
+                <p><strong>Address:</strong> <span id="result-address"></span></p>
+                <p><strong>Status:</strong> <span id="result-status"></span></p>
+                <p><strong>Items:</strong></p>
+                <ul id="result-items"></ul>
+                <p><strong>Total:</strong> ₱<span id="result-total"></span></p>
+                <p><strong>Date & Time Ordered:</strong> <span id="result-date"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="vama-corp">
+            <p>Developed by:</p>
+            <img src="photo/vama.png" height="50">
+        </div>
+        <p class="copyright">&copy; 2025 Moon Caffè. All rights reserved.</p>
+    </footer>
+
+    <script src="global.js"></script>
+    <script src="track-order.js"></script>
+</body>
+</html>

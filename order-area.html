@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="photo/logo.png">
+    <link rel="stylesheet" href="order-area.css">
+    <title>Order Area | Moon Caffe</title>
+</head>
+<body>
+    <div class="fixed">
+        <header>
+            <div class="left">
+                <a href="menu.html" class="back">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+                </a>
+                <div class="logo">
+                    <a href="#"><img src="photo/logo.png" width="70"></a>
+                    <span class="mooncaffe-text">MOON CAFFÈ</span>
+                </div>
+            </div>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒
+                <span id="cart-badge" class="cart-badge">0</span>
+            </div>
+        </header>
+        <div class="undernav">
+            <div class="food-variation">
+                <a href="#coffee">Coffee</a>
+                <a href="#non-coffee">Non-Coffee</a>
+                <a href="#caffe-frappe">Caffe Frappe</a>
+                <a href="#franilla">Franilla</a>
+                <a href="#refreshers">Refreshers</a>
+                <a href="#pasta">Pasta</a>
+                <a href="#quesadillas">Quesadillas</a>
+                <a href="#appetizers">Appetizers</a>
+                <a href="#rice-meal">Rice Meal</a>
+                <a href="#sandwich">Sandwich</a>
+                <a href="#salad">Salad</a>
+                <a href="#pastries">Pastries</a>
+            </div>
+        </div>
+    </div>
+    <div class="menu-container">
+        <p class="note">Kindly note: Hot coffee is not available here since we can’t keep it warm during delivery. Thank you for understanding!</p>
+        <div id="coffee" class="product-section">
+            <h3>Coffee</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="menu/Americano.jpg">
+                    <h4 class="product-name">Americano</h4>
+                    <p class="price">₱ 110</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Americano', 110, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Cappuccino.jpg">
+                    <h4 class="product-name">Cappuccino</h4>
+                    <p class="price">₱ 150</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Cappuccino', 110, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Caffe Latte.jpg">
+                    <h4 class="product-name">Caffe Latte</h4>
+                    <p class="price">₱ 150</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Caffe Latte', 150, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Vanilla Latte.jpg">
+                    <h4 class="product-name">Vanilla Latte</h4>
+                    <p class="price">₱ 160</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Vanilla Latte', 160, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Hazelnut Latte.jpg">
+                    <h4 class="product-name">Hazelnut Latte</h4>
+                    <p class="price">₱ 160</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Hazelnut Latte', 160, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Chai Spice Latte.jpg">
+                    <h4 class="product-name">Chai Spice Latte</h4>
+                    <p class="price">₱ 160</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Chai Spice Latte', 160, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Spanish Latte.jpg">
+                    <h4 class="product-name">Spanish Latte</h4>
+                    <p class="price">₱ 150</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Spanish Latte', 150, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Vietnamese Latte.jpg">
+                    <h4 class="product-name">Vietnamese Latte</h4>
+                    <p class="price">₱ 165</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Vietnamese Latte', 165, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Matcha Latte.jpg">
+                    <h4 class="product-name">Matcha Latte</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Matcha Latte', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Biscoff Latte.jpg">
+                    <h4 class="product-name">Biscoff Latte</h4>
+                    <p class="price">₱ 165</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Biscoff Latte', 165, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Tiramisu Latte.jpg">
+                    <h4 class="product-name">Tiramisu Latte</h4>
+                    <p class="price">₱ 160</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Tiramisu Latte', 160, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Tres Leches Latte.jpg">
+                    <h4 class="product-name">Tres Leches Latte</h4>
+                    <p class="price">₱ 160</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Tres Leches Latte', 160, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Butterscotch Latte.jpg">
+                    <h4 class="product-name">Butterscotch Latte</h4>
+                    <p class="price">₱ 160</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Butterscotch Latte', 160, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Himalayan Salt Latte.jpg">
+                    <h4 class="product-name">Himalayan Salt Latte</h4>
+                    <p class="price">₱ 150</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Himalayan Salt Latte', 150, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Coffee Jelly Latte.jpg">
+                    <h4 class="product-name">Coffee Jelly Latte</h4>
+                    <p class="price">₱ 155</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Coffee Jelly Latte', 155, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Caramel Macchiato.jpg">
+                    <h4 class="product-name">Caramel Macchiato</h4>
+                    <p class="price">₱ 160</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Caramel Macchiato', 160, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Salted Caramel Macchiato.jpg">
+                    <h4 class="product-name">Salted Caramel Macchiato</h4>
+                    <p class="price">₱ 160</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Salted Caramel Macchiato', 160, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Caffe Dark Mocha.jpg">
+                    <h4 class="product-name">Caffe Dark Mocha</h4>
+                    <p class="price">₱ 160</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Caffe Dark Mocha', 160, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Caffe White Mocha.jpg">
+                    <h4 class="product-name">Caffe White Mocha</h4>
+                    <p class="price">₱ 160</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Caffe White Mocha', 160, this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <br><br><hr>
+        <div id="non-coffee" class="product-section">
+            <h3>Non-Coffee</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="menu/Dark Chocolate.jpg">
+                    <h4 class="product-name">Dark Chocolate</h4>
+                    <p class="price">₱ 150</p><div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Dark Chocolate', 150, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/White Chocolate.jpg">
+                    <h4 class="product-name">White Chocolate</h4>
+                    <p class="price">₱ 150</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('White Chocolate', 150, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Matcha Milk.jpg">
+                    <h4 class="product-name">Matcha Milk</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Matcha Milk', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Matcha Berry.jpg">
+                    <h4 class="product-name">Matcha Berry</h4>
+                    <p class="price">₱ 150</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Matcha Berry', 150, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Strawberry Milk.jpg">
+                    <h4 class="product-name">Strawberry Milk</h4>
+                    <p class="price">₱ 150</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Strawberry Milk', 150, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Blueberry Milk.jpg">
+                    <h4 class="product-name">Blueberry Milk</h4>
+                    <p class="price">₱ 150</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Blueberry Milk', 150, this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <br><br><hr>
+        <div id="caffe-frappe" class="product-section">
+            <h3>Caffe Frappe</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="menu/Espresso Frappe.jpg">
+                    <h4 class="product-name">Espresso Frappe</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Espresso Frappe', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/White Mocha Frappe.jpg">
+                    <h4 class="product-name">White Mocha Frappe</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('White Mocha Frappe', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Dark Mocha Frappe.jpg">
+                    <h4 class="product-name">Dark Mocha Frappe</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Dark Mocha Frappe', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Caramel Frappe.jpg">
+                    <h4 class="product-name">Caramel Frappe</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Caramel Frappe', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Salted Caramel Frappe.jpg">
+                    <h4 class="product-name">Salted Caramel Frappe</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Salted Caramel Frappe', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Butterscotch Frappe.jpg">
+                    <h4 class="product-name">Butterscotch Frappe</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Butterscotch Frappe', 185, this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <br><br><hr>
+        <div id="franilla" class="product-section">
+            <h3>Franilla</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="menu/Caramel Franilla.jpg">
+                    <h4 class="product-name">Caramel Franilla</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Caramel Franilla', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Dark Chocolate Franilla.jpg">
+                    <h4 class="product-name">Dark Chocolate Franilla</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Dark Chocolate Franilla', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Strawberry Franilla.jpg">
+                    <h4 class="product-name">Strawberry Franilla</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Strawberry Franilla', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Blueberry Franilla.jpg">
+                    <h4 class="product-name">Blueberry Franilla</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Blueberry Franilla', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Matcha Franilla.jpg">
+                    <h4 class="product-name">Matcha Franilla</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Matcha Franilla', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Matcha Berry Franilla.jpg">
+                    <h4 class="product-name">Matcha Berry Franilla</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Matcha Berry Franilla', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Biscoff Franilla.jpg">
+                    <h4 class="product-name">Biscoff Franilla</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Biscoff Franilla', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Cookies & Cream Franilla.jpg">
+                    <h4 class="product-name">Cookies & Cream Franilla</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Cookies & Cream Franilla', 185, this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <br><br><hr>
+        <div id="refreshers" class="product-section">
+            <h3>Refreshers</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="menu/Lemon Iced Tea.jpg">
+                    <h4 class="product-name">Lemon Iced Tea</h4>
+                    <p class="price">₱ 120</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Lemon Iced Tea', 120, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Peach Iced Tea.jpg">
+                    <h4 class="product-name">Peach Iced Tea</h4>
+                    <p class="price">₱ 120</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Peach Iced Tea', 120, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Lychee Iced Tea.jpg">
+                    <h4 class="product-name">Lychee Iced Tea</h4>
+                    <p class="price">₱ 120</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Lyche Iced Tea', 120, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Raspberry Iced Tea.jpg">
+                    <h4 class="product-name">Raspberry Iced Tea</h4>
+                    <p class="price">₱ 120</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Raspberry Iced', 120, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Strawberry Fizz.jpg">
+                    <h4 class="product-name">Strawberry Fizz</h4>
+                    <p class="price">₱ 135</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Strawberry Fizz', 135, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Blueberry Fizz.jpg">
+                    <h4 class="product-name">Blueberry Fizz</h4>
+                    <p class="price">₱ 135</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Blueberry Fizz', 135, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Mixed Berries Fizz.jpg">
+                    <h4 class="product-name">Mixed Berries Fizz</h4>
+                    <p class="price">₱ 145</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Mixed Berries Fizz', 145, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Peach Fizz.jpg">
+                    <h4 class="product-name">Peach Fizz</h4>
+                    <p class="price">₱ 135</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Peach Fizz', 135, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Lychee Fizz.jpg">
+                    <h4 class="product-name">Lychee Fizz</h4>
+                    <p class="price">₱ 120</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Lychee Fizz', 120, this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <br><br><hr>
+        <div id="pasta" class="product-section">
+            <h3>Pasta</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="menu/Seafood Aligue Pasta.jpg">
+                    <h4 class="product-name">Seafood Aligue Pasta</h4>
+                    <p class="price">₱ 265</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Seafood Aligue Pasta', 265, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Chicken Pesto Penne.jpg">
+                    <h4 class="product-name">Chicken Pesto Penne</h4>
+                    <p class="price">₱ 230</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Chicken Pesto Penne', 230, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Truffle Cream Penne.jpg">
+                    <h4 class="product-name">Truffle Cream Penne</h4>
+                    <p class="price">₱ 230</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Truffle Cream Penne', 230, this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <br><br><hr>
+        <div id="quesadillas" class="product-section">
+            <h3>Quesadillas</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="menu/Classic Cheese Quesadilla.jpg">
+                    <h4 class="product-name">Classic Cheese Quesadilla</h4>
+                    <p class="price">₱ 160</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Classic Cheese Quesadilla', 160, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Chicken Pesto Quesadilla.jpg">
+                    <h4 class="product-name">Chicken Pesto Quesadilla</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Chicken Pesto Quesadilla', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Chicken Fajita Quesadilla.jpg">
+                    <h4 class="product-name">Chicken Fajita Quesadilla</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Chicken Fajita Quesadilla', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Cheesy Beef Quesadilla.jpg">
+                    <h4 class="product-name">Cheesy Beef Quesadilla</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Cheesy Beef Quesadilla', 185, this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <br><br><hr>
+        <div id="appetizers" class="product-section">
+            <h3>Appetizers</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="menu/Nachos con Carne.jpg">
+                    <h4 class="product-name">Nachos con Carne</h4>
+                    <p class="price">₱ 160</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Nachos con Carne', 160, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Cheesy Fries con Carne.jpg">
+                    <h4 class="product-name">Cheesy Fries con Carne</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Cheesy Fires con Carne', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Cheesy Bacon Fries.jpg">
+                    <h4 class="product-name">Cheesy Bacon Fries</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Cheesy Bacon Fries', 185, this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <br><br><hr>
+        <div id="rice-meal" class="product-section">
+            <h3>Rice Meal</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="menu/Pork Barbeque with Kimchi Fried Rice.jpg">
+                    <h4 class="product-name">Pork Barbeque with Kimchi Fried Rice</h4>
+                    <p class="price">₱ 240</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Pork Barbeque with Kimchi Fried Rice', 240, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Beef Bulgogi with Kimchi Fried Rice.jpg">
+                    <h4 class="product-name">Beef Bulgogi with Kimchi Fried Rice</h4>
+                    <p class="price">₱ 265</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Beef Bulgogi with Kimchi Fried Rice', 265, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Pork Katsu with Kimchi Fried Rice.jpg">
+                    <h4 class="product-name">Pork Katsu with Kimchi Fried Rice</h4>
+                    <p class="price">₱ 240</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Pork Katsu with Kimchi Fried Rice', 240, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Chicken Katsu with Kimchi Fried Rice.jpg">
+                    <h4 class="product-name">Chicken Katsu with Kimchi Fried Rice</h4>
+                    <p class="price">₱ 240</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Chicken Katsu with Kimchi Fried Rice', 240, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Pork Katsu Curry.jpg">
+                    <h4 class="product-name">Pork Katsu Curry</h4>
+                    <p class="price">₱ 240</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Pork Katsu Curry', 240, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Chicken Katsu Curry.jpg">
+                    <h4 class="product-name">Chicken Katsu Curry</h4>
+                    <p class="price">₱ 240</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Chicken Katsu Curry', 240, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Pork Tonkatsu.jpg">
+                    <h4 class="product-name">Pork Tonkatsu</h4>
+                    <p class="price">₱ 230</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Pork Tonkatsu', 230, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Chicken Tonkatsu.jpg">
+                    <h4 class="product-name">Chicken Tonkatsu</h4>
+                    <p class="price">₱ 230</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Chicken Tonkatsu', 230, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Salisbury Steak Balls.jpg">
+                    <h4 class="product-name">Salisbury Steak Balls</h4>
+                    <p class="price">₱ 260</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Salisbury Steak Balls', 260, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Chicken Fajita.jpg">
+                    <h4 class="product-name">Chicken Fajita</h4>
+                    <p class="price">₱ 230</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Chicken Fajita', 230, this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <br><br><hr>
+        <div id="sandwich" class="product-section">
+            <h3>Sandwich</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="menu/Clubhouse Sandwich.jpg">
+                    <h4 class="product-name">Clubhouse Sandwich</h4>
+                    <p class="price">₱ 185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Clubhouse Sandwich', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Chicken Pesto Sandwich.jpg">
+                    <h4 class="product-name">Chicken Pesto Sandwich</h4>
+                    <p class="price">190</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Chicken Pesto Sandwich', 190, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Chicken Sandwich.jpg">
+                    <h4 class="product-name">Chicken Sandwich</h4>
+                    <p class="price">185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Chicken Sandwich', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Chicken Wrap.jpg">
+                    <h4 class="product-name">Chicken Wrap</h4>
+                    <p class="price">185</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Chicken Wrap', 185, this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <br><br><hr>
+        <div id="salad" class="product-section">
+            <h3>Salad</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="menu/Chicken Caesar Salad.jpg">
+                    <h4 class="product-name">Chicken Caesar Salad</h4>
+                    <p class="price">₱ 230</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Chicken Caesar Salad', 185, this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <br><br><hr>
+        <div id="pastries" class="product-section">
+            <h3>Pastries</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="menu/Belgian Chocolate Chip Walnut Cookie.jpg">
+                    <h4 class="product-name">Belgian Chocolate Chip Walnut Cookie</h4>
+                    <p class="price">₱ 240</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Belgian Chocolate Whip Walnut Cookie', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Classic Basque Burnt Cheesecake.jpg">
+                    <h4 class="product-name">Classic Basque Burnt Cheesecake</h4>
+                    <p class="price">₱ 170</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Classic Basque Burnt Cheesecake', 185, this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="menu/Classic Tiramisu.jpg">
+                    <h4 class="product-name">Classic Tiramisu</h4>
+                    <p class="price">₱ 290</p>
+                    <div class="quantity-controls">
+                        <div class="quantity-controls-container">
+                            <button onclick="changeQuantity(this, -1)">-</button>
+                            <span>1</span>
+                            <button onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="add" onclick="addToCart('Classic Tiramisu', 290, this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="vama-corp">
+            <p>Developed by:</p>
+            <img src="photo/vama.png" height="50">
+        </div>
+        <p class="copyright">&copy; 2025 Moon Caffè. All rights reserved.</p>
+    </footer>
+    <div id="cart" class="cart-sidebar">
+        <a class="close-cart" onclick="toggleCart()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        </a>
+        <h2>Your Cart</h2>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer">
+            <p id="total">Total: ₱0</p>
+            <button id="checkout-btn" class="checkout" disabled>Check out</button>
+        </div>
+    </div>
+    <!-- Toast -->
+    <div id="toast" class="toast">Item added to cart</div>
+
+    <script src="order-area.js"></script>
+</body>
+</html>

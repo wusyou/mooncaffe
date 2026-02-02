@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="photo/logo.png">
+    <link rel="stylesheet" href="info.css">
+    <title>Customer Info | Moon Caffe</title>
+</head>
+<body>
+    <header>
+            <div class="left">
+                <a href="order-area.html" class="back">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+                </a>
+                <div class="logo">
+                    <a href="#"><img src="photo/logo.png" width="70"></a>
+                    <span class="mooncaffe-text">MOON CAFFÈ</span>
+                </div>
+            </div>
+        </header>
+        <div id="step1" class="checkout-step">
+            <h2>📝 Customer Information</h2>
+            <p>Please fill in your details to calculate delivery fee and ETA:</p>
+
+            <form id="customer-info-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="contact">Contact Number</label>
+                <input type="tel" id="contact" name="contact" placeholder="09XXXXXXXXX" required>
+
+                <label for="barangay">Barangay</label>
+                <select id="barangay" name="barangay" required>
+                    <option value="" disabled selected>Select your barangay</option>
+                    <option value="Balon-Anito">Balon-Anito</option>
+                    <option value="Camaya">Camaya</option>
+                    <option value="Ipag">Ipag</option>
+                    <option value="Maligaya">Maligaya</option>
+                    <option value="Malaya">Malaya</option>
+                    <option value="Poblacion">Poblacion</option>
+                    <option value="San Carlos">San Carlos</option>
+                    <option value="San Isidro">San Isidro</option>
+                </select>
+
+                <label for="address">Street / House No.</label>
+                <input type="text" id="address" name="address" placeholder="123 Street Name" required>
+
+                <label for="notes">Notes / Instructions (optional)</label>
+                <textarea id="notes" name="notes" placeholder="Leave any instructions here"></textarea>
+
+                <button type="submit" id="next-btn" class="next-btn">Next: Review Order</button>
+            </form>
+        </div>
+
+        <footer>
+            <div class="vama-corp">
+                <p>Developed by:</p>
+                <img src="photo/vama.png" height="50">
+            </div>
+            <p class="copyright">&copy; 2025 Moon Caffè. All rights reserved.</p>
+        </footer>
+
+        <script src="info.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.firstpic-about {
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;  
+    align-items: flex-start;  
+    height: 76vh;
+    background: url('photo/firstpic-about.png') no-repeat center center/cover;
+    align-items: center;
+}
+
+.mission {
+    color: white;
+    text-align: center;
+}
+
+.mission h2 {
+    margin: 20px;
+    font-size: 2rem;
+}
+
+.mission p {
+    width: 400px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main h2 {
+    margin-top: 4rem;
+}
+
+main p {
+    margin: 1rem 0;
+    text-align: justify;
+    color: rgb(59, 59, 59);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-indent: 20px;
+}
+
+main p a {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    color: blue;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+main img {
+    margin: 1rem;
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.left-position {
+    text-align: left;
+}
+
+.socials a {
+    margin: 1.5rem;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    transition: 0.5s;
+}
+
+.socials a:hover {
+    color: blue;
+}
+
+.socials a i {
+    margin-right: 6px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 426px) {
+    .mission h2 {
+        margin: 20px;
+        font-size: 2rem;
+    }
+
+    .mission p {
+        width: 400px;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 376px) {
+    .mission h2 {
+        margin: 20px;
+        font-size: 2rem;
+    }
+
+    .mission p {
+        width: 400px;
+        font-size:1.2rem;
+        line-height: 1.5;
+    }
+
+    .socials a {
+        margin: 1.5rem 5px;
+    }
+}
+
+@media (max-width: 321px) {
+    .mission p {
+        width: 300px;
+        font-size:1.2rem;
+        padding: 0 10px;
+        line-height: 1.5;
+    }
+
+    .socials a{
+        font-size: 17px;
+    }
+}

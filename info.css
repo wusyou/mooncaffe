@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 1.25rem 5vw;
+    letter-spacing: 0.125rem;
+}
+
+.fixed {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.back {
+    margin-right: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size:  clamp(1rem, 2vw, 1.25rem);
+    gap: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.checkout-step {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;  
+  margin: 2rem auto;
+}
+
+.checkout-step h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.checkout-step p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.checkout-step label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.checkout-step input,
+.checkout-step select,
+.checkout-step textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.checkout-step input:focus,
+.checkout-step select:focus,
+.checkout-step textarea:focus {
+  border-color: #6c63ff;
+}
+
+.next-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: black;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.next-btn:hover {
+  background: rgba(0, 0, 0, 0.800);
+}
+
+
+footer {
+    color: black;
+    display: flex;
+    margin: 7rem 3rem 0;
+}
+
+.vama-corp, .copyright {
+    flex: 1;
+    padding: 1rem;
+    border-top: 1px solid gray;
+}
+
+.vama-corp {
+    display: flex;
+    font-size: 1rem;
+}
+
+.copyright {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .copyright {
+        justify-content: center;
+        border: none;
+        padding-top: 0;;
+    }
+
+    .vama-corp {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+  .checkout-step {
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .checkout-step h2 {
+    font-size: 1.2rem;
+  }
+
+  .checkout-step p {
+    font-size: 13px;
+  }
+
+  .next-btn {
+    font-size: 14px;
+    padding: 0.6rem;
+  }
+}
+
